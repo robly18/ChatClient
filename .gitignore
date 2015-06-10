@@ -44,3 +44,6 @@ Temporary Items
 
 # For security reasons
 /ChatClient/ChatClient/settings.py
+
+# Just because
+*.pyc
