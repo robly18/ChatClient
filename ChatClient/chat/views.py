@@ -4,5 +4,8 @@ from django.http import HttpResponse
 
 # Create your views here.
 
-def chatroom(request, roomName):
-	return HttpResponse("hello you are in chatroom %s" % roomName)
+def chatRoom(request, roomName):
+	return render(request, "chat/chatRoom.html")
+
+def msgInput(request):
+	pass

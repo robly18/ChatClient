@@ -5,6 +5,7 @@
 <h1 style="text-align:center;">Chat Room -- "INSERT NAME OF THE ROOM"</h1>
 </body>
 <form style="text-align:center;" action="" method="POST">
+{% csrf_token %}
 <p>INPUT TEXT:</p><br/>
 <input type="text" name="msgInput" id="msgInput"/><br/>
 <input type="submit" value="SEND MESSAGE"/>
