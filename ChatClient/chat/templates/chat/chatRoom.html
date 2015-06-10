@@ -1,12 +1,19 @@
 <head>
 <title>Chat Room</title>
+<script>
+var source = new EventSource("");
+source.onmessage = function(event) {
+    document.getElementById("chat").innerHTML += event.data + "<br>";
+};
+</script>
 </head>
 <body>
 <h1 style="text-align:center;">Chat Room -- "INSERT NAME OF THE ROOM"</h1>
 </body>
-<form style="text-align:center;" action="{% url 'chat:msgInput' %}" method="POST">
+<form style="text-align:center;" action="server" method="POST">
 {% csrf_token %}
 <p>INPUT TEXT:</p><br/>
 <input type="text" name="msgInput" id="msgInput"/><br/>
 <input type="submit" value="SEND MESSAGE"/>
 </form>
+<p id="chat"></p>
